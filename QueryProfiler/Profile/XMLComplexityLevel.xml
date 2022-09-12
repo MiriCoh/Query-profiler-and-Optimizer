@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<complexitiesLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<complexityLevel>
+		<JoinUnionLookupCounter>
+			<range>
+				<from>0</from>
+				<to>0</to>
+			</range>
+	</JoinUnionLookupCounter>
+		<MvExpandInCounter>
+			<range>
+				<from>0</from>
+				<to>0</to>
+			</range>
+		</MvExpandInCounter>
+		<Level>0</Level>
+	</complexityLevel>
+	
+	
+
+	<complexityLevel>
+			<JoinUnionLookupCounter>
+				<range>
+					<from>1</from>
+					<to>2</to>
+				</range>
+			</JoinUnionLookupCounter>
+			<MvExpandInCounter>
+				<range>
+					<from>1</from>
+					<to>2</to>
+				</range>
+			</MvExpandInCounter>
+		<Level>1</Level>
+	</complexityLevel>
+
+	<complexityLevel>
+			<JoinUnionLookupCounter>
+				<range>
+					<from>2</from>
+					<to>4</to>
+				</range>
+			</JoinUnionLookupCounter>
+			<MvExpandInCounter>
+				<range>
+					<from>1</from>
+					<to>3</to>
+				</range>
+			</MvExpandInCounter>
+		<Level>2</Level>
+	</complexityLevel>
+
+	<complexityLevel>
+			<JoinUnionLookupCounter>
+				<range>
+					<from>4</from>
+					<to>6</to>
+				</range>
+			</JoinUnionLookupCounter>
+			<MvExpandInCounter>
+				<range>
+					<from>1</from>
+					<to>3</to>
+				</range>
+			</MvExpandInCounter>
+		<Level>3</Level>
+	</complexityLevel>
+	
+	<complexityLevel>
+			<JoinUnionLookupCounter>
+				<range>
+					<from>6</from>
+					<to>100</to>
+				</range>
+			</JoinUnionLookupCounter>
+			<MvExpandInCounter>
+				<range>
+					<from>1</from>
+					<to>3</to>
+				</range>
+			</MvExpandInCounter>
+		<Level>4</Level>
+	</complexityLevel>
+</complexitiesLevel>
+
+
+
+

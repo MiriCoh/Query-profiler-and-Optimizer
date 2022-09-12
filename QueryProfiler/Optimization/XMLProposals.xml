@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ProposalsOptimizations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<ProposalScheme>
+		<SourceOperator>Contains</SourceOperator>
+		<ProposalOptimalOperator>contains_cs</ProposalOptimalOperator>
+		<ProposalReason>Use contains_cs instead of contains because the value with a cs suffix is case sensitive so the search will be more focused and faster than contains</ProposalReason>
+	</ProposalScheme>
+	<ProposalScheme>
+		<SourceOperator>Contains</SourceOperator>
+		<ProposalOptimalOperator>has/has_cs</ProposalOptimalOperator>
+		<ProposalReason>When looking for full tokens, has works better, since it doesn't look for substrings</ProposalReason>
+	</ProposalScheme>
+	<ProposalScheme>
+		<SourceOperator>Has</SourceOperator>
+		<ProposalOptimalOperator>has_cs</ProposalOptimalOperator>
+		<ProposalReason>Use has instead of has_cs because the value with the suffix cs is case sensitive so the search will be more focused and faster than has</ProposalReason>
+	</ProposalScheme>
+	<ProposalScheme>
+		<SourceOperator>In~</SourceOperator>
+		<ProposalOptimalOperator>in</ProposalOptimalOperator>
+		<ProposalReason>Use in~ instead of in because in~ is case sensitive, so the search is more focused and faster</ProposalReason>
+	</ProposalScheme>
+	<ProposalScheme>
+		<SourceOperator>Join</SourceOperator>
+		<ProposalOptimalOperator>Join kind=leftouter/rightouter</ProposalOptimalOperator>
+		<ProposalReason>Use Join kind=leftouter/rightouter because kind=leftouter put Null rows in the left table that do not have a match in the left/right table will be omitted instead of being</ProposalReason>
+	</ProposalScheme>
+	<ProposalScheme>
+		<SourceOperator>Join</SourceOperator>
+		<ProposalOptimalOperator>Join kind=rightsemi/kind=leftsemi</ProposalOptimalOperator>
+		<ProposalReason>if one table is always smaller than the other, use it as the left (piped) side of the join.</ProposalReason>
+	</ProposalScheme>
+	<ProposalScheme>
+		<SourceOperator>Lookup</SourceOperator>
+		<ProposalOptimalOperator>lookup kind=leftouter</ProposalOptimalOperator>
+		<ProposalReason>Use lookup kind=leftouter instead of lookup because kind=leftouter put Null rows in the left table that do not have a match in the right table will be omitted instead of being</ProposalReason>
+	</ProposalScheme>
+
+	<ProposalScheme>
+		<SourceOperator>Join</SourceOperator>
+		<ProposalOptimalOperator>lookup</ProposalOptimalOperator>
+		<ProposalReason>Use lookup instead of join because join needs more memory so lookup will be faster</ProposalReason>
+	</ProposalScheme>
+	<ProposalScheme>
+		<SourceOperator>summarize</SourceOperator>
+		<ProposalOptimalOperator>summarize hint.shufflekey</ProposalOptimalOperator>
+		<ProposalReason>
+			Using many partitions may consume more cluster resources and degrade performance.
+			Choose the partition number carefully by starting with the summarize hint.strategy = shuffle and start increasing the partitions gradually.
+		</ProposalReason>
+	</ProposalScheme>
+	<ProposalScheme>
+		<SourceOperator>make-series</SourceOperator>
+		<ProposalOptimalOperator>join hint.shufflekey</ProposalOptimalOperator>
+		<ProposalReason>
+			Using many partitions may consume more cluster resources and degrade performance.
+			Choose the partition number carefully by starting with the make-series hint.strategy = shuffle and start increasing the partitions gradually.
+		</ProposalReason>
+	</ProposalScheme>
+</ProposalsOptimizations>
+
+
+
+
+

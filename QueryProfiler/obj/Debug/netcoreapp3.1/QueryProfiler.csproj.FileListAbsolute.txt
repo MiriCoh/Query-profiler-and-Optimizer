@@ -1,0 +1,10 @@
+C:\Users\user1\Desktop\QueryProfiler\QueryProfiler\bin\Debug\netcoreapp3.1\QueryProfiler.deps.json
+C:\Users\user1\Desktop\QueryProfiler\QueryProfiler\bin\Debug\netcoreapp3.1\QueryProfiler.dll
+C:\Users\user1\Desktop\QueryProfiler\QueryProfiler\bin\Debug\netcoreapp3.1\QueryProfiler.pdb
+C:\Users\user1\Desktop\QueryProfiler\QueryProfiler\obj\Debug\netcoreapp3.1\QueryProfiler.Properties.Resources.resources
+C:\Users\user1\Desktop\QueryProfiler\QueryProfiler\obj\Debug\netcoreapp3.1\QueryProfiler.csproj.GenerateResource.cache
+C:\Users\user1\Desktop\QueryProfiler\QueryProfiler\obj\Debug\netcoreapp3.1\QueryProfiler.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\QueryProfiler\QueryProfiler\obj\Debug\netcoreapp3.1\QueryProfiler.AssemblyInfo.cs
+C:\Users\user1\Desktop\QueryProfiler\QueryProfiler\obj\Debug\netcoreapp3.1\QueryProfiler.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\QueryProfiler\QueryProfiler\obj\Debug\netcoreapp3.1\QueryProfiler.dll
+C:\Users\user1\Desktop\QueryProfiler\QueryProfiler\obj\Debug\netcoreapp3.1\QueryProfiler.pdb
